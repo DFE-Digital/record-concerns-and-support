@@ -22,8 +22,10 @@
       </h1>
 
       <p>
-        <div class="govuk-inset-text">
-          The information in these fields can be used when discussing cases at risk meetings. Information in case notes is not used in these meetings. 
+        <div class="govuk-hint">
+          You must add the issue to create the case. You can complete the other fields now or later. Include information for each concern if the case has multiple concerns.
+  
+          The information in these fields will be used in risk review meetings with senior staff.          
         </div>
       </p>
 
@@ -79,8 +81,21 @@
       </dl>
 
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="case-overview" method="post">
+        
+        
+        <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Add case details
+            <div id="risk-hint" class="govuk-hint">
+              You must add the issue to create the case. You can complete the other fields now or later. 
+              Include information for each concern if the case has multiple concerns.
+              <br>
+              The information in these fields will be used in risk review meetings with senior staff.  
+            </div>
+          </h2>
 
+        </legend> -->
        
 
 
@@ -100,16 +115,19 @@
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        Help to complete issue 
+                        Help with issue 
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      Provide a summary of the decision to open a concerns case. Explain: 
+                      Briefly explain the main issue. Include: 
                       <ul>
-                        <li>why you have opened a concerns case </li>
-                        <li>how you found out about the concern or concerns</li>
-                        <li>how the risk level you have applied relates to the risk management framework</li>
+                        <li>how the concern was identified </li>
+                        <li>the risk rating and why you chose this, with reference to the risk management framework</li>
+                      
                       </ul>
+
+                       
+
       
                     </div>
                   </details> 
@@ -128,22 +146,24 @@
 
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--m" for="with-hint">
-                Current status of this case
+                Current status
               </label>
             </h1>
             <div id="with-hint-hint" class="govuk-hint">
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
-                    Help to complete current status 
+                    Help with current status 
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  Provide a summary of any live issues in the case. Include: 
+                  Explain what is currently happening in the case and why this is significant. 
+                  Only include relevant information that the minister or senior officials need to know, including: 
+
                   <ul>
-                    <li>the most recent actions you have taken to manage the case and the results of these actions </li>
-                    <li>deadlines for anticipated responses from the trust or other bodies </li>
-                    <li>details of any relevant decisions, including approval information seek assurances to issues identified in financial audit</li>
+                    <li>background information about the trust</li>
+                    <li>case progress</li>
+                    <li>what you're doing to manage the case</li>
                   </ul>
   
                 </div>
@@ -169,15 +189,16 @@
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
-                    Help to complete case aim 
+                    Help with case aim 
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  Explain what you want to achieve by opening a concerns case. For example: 
+                  Explain what you want to achieve with this case. This could be:
+ 
                   <ul>
-                    <li>seek assurances to issues identified in financial audit</li>
-                    <li>ensure effective governance at the trust </li>
-                    <li>support the trust to comply with safeguarding best practice </li>
+                    <li>supporting the trust to do something</li>
+                    <li>making sure the trust complies with certain requirements </li>
+                    <li>seeking assurances that the trust will do something</li>
                   </ul>
   
                 </div>
@@ -205,15 +226,11 @@
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
-                    Help to complete de-escalation point 
+                    Help with de-escalation point 
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  Explain how risk levels will change in this case, including 
-                  <ul>
-                    <li>what actions will increase the risk level</li>
-                    <li>how you’ve applied the risk management framework to make these decisions </li>
-                  </ul>
+                  Explain when you will reduce the risk level in this case and what level you’ll reduce it to.
   
                 </div>
               </details>
@@ -237,15 +254,16 @@
             <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
-                  Help to complete next steps
+                  Help with next steps
                 </span>
               </summary>
               <div class="govuk-details__text">
-                Explain the next steps you will take to manage the case, including: 
-              
+                Explain what you plan to do next to manage the case, including: 
+                 
                 <ul>
                   <li>dates for reviews, deadlines or meetings </li>
-                  <li>case interventions, such as sending an SRMA or issuing warning letters </li>
+                  <li>anything you expect the trust to do and when you expect this to happen </li>
+                  <li>case interventions, such as sending an SRMA or issuing warning letters</li>
                 </ul>
 
               </div>
@@ -275,17 +293,14 @@
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
-                    Help to complete case notes
+                    Help with case notes
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  Use this field to capture helpful information about the case that is not recorded elsewhere. You may want to record 
-                  <ul>
-                    <li>notes and reminders for yourself</li>
-                    <li>contact details for people who are helping with the case (GDPR??) </li>
-                    <li>context about the case to help others who may be looking at the case in your absence  </li>
-                  </ul>
-  
+                  You don’t have to complete this section but can use it to add context or additional information 
+                  that is not captured elsewhere in the case. 
+                <br><br>
+                  This information will not be included in reports to the minister or senior officials.
                 </div>
               </details>
      
