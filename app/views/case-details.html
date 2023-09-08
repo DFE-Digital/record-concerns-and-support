@@ -1,0 +1,174 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Create case</span>
+         Add case details
+      </h1>
+      <div class="govuk-inset-text">
+        The information in these fields can be used when discussing cases at risk meetings. Information in case notes is not used in these meetings. 
+      </div>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <!-- <p>
+          [Insert question content here - see the
+          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          for examples]
+        </p> -->
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Issue
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+              Explain why you are opening a concerns case. 
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div>
+        </div>
+
+        
+       
+
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="3000">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Current status of this case
+              </label>
+            </h1>
+            <div id="with-hint-hint" class="govuk-hint">
+              Explain what is currently happening in this case. Include any deadlines for responses or actions.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You have 2,000 characters remaining
+          </div>
+        </div>
+        
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Case aim
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+              Explain the intended outcome for this case.  
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div>
+        </div>
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1500">
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Risk de-escalation point
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+              Explain when risk levels in this case will be downgraded and when the case will be closed. Refer to the risk management framework. 
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <!-- <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div> -->
+        </div>
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="2500">
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Next steps
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+              Explain what you will do next to manage this case. Include any relevant actions and dates.  
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div>
+        </div>
+
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Case notes
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+              Use this field for notes about the case and information that is not captured elsewhere. This information will not be used in risk meetings.    
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <!-- <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div> -->
+        </div>
+        
+        <!-- <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="with-hint">
+                Can you provide more detail?
+              </label>
+            </h1>
+            <div id="with-hint-hint" class="govuk-hint">
+              Do not include personal or financial information like your National Insurance number or credit card details.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 200 characters
+          </div>
+        </div> -->
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

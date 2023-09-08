@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Create case
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trust
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Edify multi-academy trust
+          </dd>
+        </div>
+        
+       
+        
+      </dl>
+
+
+      <form class="form" action="/create-concern-rg" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                What do you want to record?
+              </h2>
+            </legend>
+            <!-- <div id="signIn-hint" class="govuk-hint">
+              You’ll need an account to prove your identity and complete your Self Assessment.
+            </div> -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="signIn">
+                  A concern about finance or force majeure
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Add narrative, actions and decisions about new financial, financial governance and financial compliance concerns
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="signIn-2">
+                  A concern about governance or safeguarding
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Add narrative, actions and decisions about new non-financial governance, compliance and safeguarding concerns
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-3" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-3-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="signIn-3">
+                  Actions or decisions that are not related to a concern
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Actions include proactive SRMAs (School Resource Management Adviser) and TFF (Trust Financial Forecast) engagement. Decisions 
+                  include freedom of information exemptions and financial support.
+                </div>
+              </div>
+
+
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

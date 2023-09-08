@@ -1,0 +1,233 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Create case</span>
+        Add a concern
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trust
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Edify multi-academy trust
+          </dd>
+        </div>
+        
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Governance
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Concern risk level
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Red
+          </dd>
+        </div> -->
+        
+      </dl>
+
+      <form class="form" action="create-concern-summary" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Select a concern type
+              </h2>
+
+            </legend>
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help choosing a concern type
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <strong>Governance</strong> 
+                <br>
+                Choose this option to record concerns about: 
+                <ul>
+                  <li>how a trust is run </li>
+                <li>conflicts of interest </li>
+                <li>insufficient challenge at a trust </li>
+                <li>failure to comply with the Academy Trust Handbook, funding agreement or other requirements</li>
+                </ul>
+                <strong>Safeguarding</strong> <br>
+                Choose this option to record concerns about: 
+                <ul>
+                  <li>safeguarding inefficiencies at a trust </li>
+                  <li>a trust hitting trigger points for a safeguarding concern</li>
+                </ul>
+              </div>
+            </details>
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="concerntype" name="concerntype" type="radio" value="governance">
+                <label class="govuk-label govuk-radios__label" for="concerntype">
+                  Governance
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="concerntype-2" name="concerntype" type="radio" value="safeguarding">
+                <label class="govuk-label govuk-radios__label" for="concerntype-2">
+                  Safeguarding
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+        </div>
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Select a risk rating for the concern
+              </h2>
+
+            </legend>
+
+            <div id="risk-hint" class="govuk-hint">
+              Use the <a href="#">risk management framework (opens in new tab)</a> to assess the risk level for the concern.
+            </div>
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="riskrating" name="riskrating" type="radio" value="amberGreen">
+                <label class="govuk-label govuk-radios__label" for="riskrating">
+                  <strong class="govuk-tag govuk-tag--orange">
+                    Amber
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--green">
+                    Green
+                  </strong>
+                  
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="riskrating-2" name="riskrating" type="radio" value="redAmber">
+                <label class="govuk-label govuk-radios__label" for="riskrating-2">
+                  <strong class="govuk-tag govuk-tag--red">
+                    Red
+                  </strong> 
+                  
+                  <strong class="govuk-tag govuk-tag--orange">
+                    Amber
+                  </strong>
+
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="riskrating-3" name="riskrating" type="radio" value="red">
+                <label class="govuk-label govuk-radios__label" for="riskrating-3">
+                  <strong class="govuk-tag govuk-tag--red">
+                    Red
+                  </strong> 
+                </label>
+              </div>
+  
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="riskrating-4" name="riskrating" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="riskrating-4">
+                  <strong class="govuk-tag govuk-tag--red">
+                    Red plus
+                  </strong> 
+                </label>
+              </div>
+
+
+            </div>
+
+            
+          </fieldset>
+
+
+        </div>
+
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                What was the source of this concern?
+              </h2>
+
+            </legend>
+
+            
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="source" name="source" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="source">
+                  Internal department activity
+                </label>
+                <div id="internal-source-hint" class="govuk-hint govuk-radios__hint">
+                  For example, management letter, external review of governance, ESFA activity or other departmental activity.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="source-2" name="source" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="source-2">
+                  An external source
+                </label>
+
+                <div id="internal-source-hint" class="govuk-hint govuk-radios__hint">
+                  For example, whistleblowing, self-reported, CIU casework, regional director (RD) or other government bodies.
+                </div>
+
+              </div>
+            </div>
+          </fieldset>
+
+
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

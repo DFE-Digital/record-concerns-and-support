@@ -1,0 +1,381 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Case created
+        </h3>
+        <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p>
+      </div>
+    </div>
+
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Case ID 1234567</span>
+        Edify multi-academy trust
+      </h1>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#past-day">
+              Case overview
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-week">
+              Trust overview
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-month">
+              Notes
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-year">
+              Past year
+            </a>
+          </li> -->
+        </ul>
+        <div class="govuk-tabs__panel" id="past-day">
+          <h2 class="govuk-heading-m">Case overview</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Trust
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Edify multi-academy trust
+              </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Case type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Governance
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+    
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Concern risk level
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Red
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+    
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Risk to trust
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Red
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+    
+    
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Region
+              </dt>
+              <dd class="govuk-summary-list__value">
+                South West
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+    
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Assigned to
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Isobel Seacombe
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Added on
+              </dt>
+              <dd class="govuk-summary-list__value">
+                5 September 2023
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Last updated
+              </dt>
+              <dd class="govuk-summary-list__value">
+                5 September 2023
+              </dd>
+            </div>
+          </dl>
+
+
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+          <h2 class="govuk-heading-m">About the trust</h2>
+          
+          <dl class="govuk-summary-list summary-list-margin-0 govuk-!-margin-top-3">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Type</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-type">
+                Multi-academy trust
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Address</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-address">
+                Bourne Abbey C Of E Primary Academy, Abbey Road, Bourne, PE10 9EP
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Number of academies</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-academies">
+                3
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Total pupil capacity</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-pupil-capacity">
+                1083
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Number of pupils</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-number-of-pupils">
+                1097 (101%)
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Group Id</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-group-id">
+                TR00261
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">UKPRN (UK provider reference number) </dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-UKPRN">
+                10058308
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Trust phone number</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-phone-number">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Companies House</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-company-house-number">
+                <a href="https://find-and-update.company-information.service.gov.uk/company/07318714" target="_blank">
+                  07318714 (opens in new tab)
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+
+          <table class="govuk-table  govuk-!-margin-top-9">
+            <caption class="govuk-table__caption govuk-table__caption--m">
+              Academies in this trust
+            </caption>
+          
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row tr__large">
+                <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_15" scope="col">
+                  Academy
+                </th>
+                      <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                          URN (unique reference number)
+                      </th>
+                <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                  Type
+                </th>
+                      <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                          LA (local authority)
+                      </th>
+                <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                  Head
+                </th>
+              </tr>
+            </thead>
+          
+            <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.bourneabbeyprimary.co.uk" target="_blank">
+                        Bourne Abbey Church of England Primary Academy
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      136354
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy converter
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mr Peter Bellamy
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.bourneelseaparkprimary.co.uk" target="_blank">
+                        Bourne Elsea Park Church of England Primary Academy
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      140214
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy sponsor led
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mr Peter Bellamy
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.colsterworth.lincs.sch.uk" target="_blank">
+                        Colsterworth Church of England Primary School
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      146279
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy sponsor led
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mrs Louise Jordan
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+
+
+         
+        </div>
+        <p class="govuk-body">
+        dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
+        bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
+        quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin 
+        libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor 
+        lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet 
+        sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra sit amet 
+        aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean 
+        euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis 
+        rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed 
+        faucibus turpis in eu mi bibendum neque egestas congue quisque egestas diam in arcu cursus 
+        euismod quis viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat sed cras 
+        ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse 
+        ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet 
+        venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi 
+        tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus 
+        sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo 
+        ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed 
+        vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat 
+        velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis 
+        convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales 
+        neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit 
+        gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum 
+        et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt 
+        tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat 
+        nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed 
+        sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus 
+        mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui 
+        accumsan sit amet nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non 
+        curabitur gravida arcu ac tortor dignissim convallis aenean et tortor at risus viverra 
+        adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a 
+        pellentesque sit amet porttitor eget dolor morbi non arcu risus quis varius quam quisque 
+        id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum 
+        posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin 
+        nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue 
+      </p>
+      
+      </div>
+
+<!--       
+      <p>
+        This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
+      </p>
+
+      <p>
+        Read more <a href="/path/of/page">about this topic</a>.
+      </p> -->
+
+    </div>
+  </div>
+
+{% endblock %}

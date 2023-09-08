@@ -1,0 +1,177 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Create case</span>
+        Who is managing the concern?
+      </h1>
+
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trust
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Edify multi-academy trust
+          </dd>
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Governance
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Concern risk level
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Red
+          </dd>
+        </div>
+
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Risk to trust
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Red
+          </dd>
+        </div>
+      </dl>
+
+
+      <form class="form" action="about-the-case" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Select the area managing the case
+              </h2>
+
+            </legend>
+
+            <!-- <div id="risk-hint" class="govuk-hint">
+              Use your judgement to choose an overall risk rating for the case.
+            </div> -->
+
+            <!-- <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with overall risk to trust
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                If your case has only one concern the risk to trust should match the concern risk. 
+                <br><br>
+                If your case has multiple concerns the risk to trust may be the same as the highest concern risk. But lots of lower level concerns may mean a higher overall risk to the trust. 
+              </div>
+            </details> -->
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region" name="region" type="radio" value="amberGreen">
+                <label class="govuk-label govuk-radios__label" for="region">
+                  East of England
+                  
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-2" name="region" type="radio" value="redAmber">
+                <label class="govuk-label govuk-radios__label" for="region-2">
+                  East Midlands
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-3" name="region" type="radio" value="red">
+                <label class="govuk-label govuk-radios__label" for="region-3">
+                  London 
+                </label>
+              </div>
+  
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-4" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-4">
+                  North East
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-5" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-5">
+                  North West
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-6" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-6">
+                  West Midlands
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-7" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-7">
+                  South East
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-8" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-8">
+                  South West
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-9" name="region" type="radio" value="redPlus">
+                <label class="govuk-label govuk-radios__label" for="region-9">
+                  Yorkshire and the Humber
+                </label>
+              </div>
+
+
+            </div>
+
+            
+          </fieldset>
+
+
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
