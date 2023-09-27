@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back",
+    text: "Back to casework",
     href: "javascript:window.history.back()"
   }) }}
 {% endblock %}
@@ -33,22 +33,34 @@
       </div>
     </div> -->
 
+    <div class="buttons-topOfPage">
+      <div class="govuk-width-container">
+          <a id="back-link-event" href="/" class="govuk-back-link">Back to casework</a>
+      </div>
+          <form method="post">
 
+              <button role="button" class="govuk-button govuk-button--warning float__right" id="close-case-button" data-module="govuk-button">
+                  Close case
+              </button>
+
+          <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CwkLHzUIMtArWfExXdxqQkg2ucU6izKsmKiT7bSwuMzJOBYTk-xwChPSTelPeEmENXLv5FbalOCGfrj9L7-70NK5Cps8K_H8lwtz0URidyky0BYB8HkfyIIU7y9rZRBvQOTcnOBOZx2vxEOhVgcqRRB5D7bgjAlH9TPfXVZW_U9Sg2KZAdB-UcGyrMYItt_-g"></form>
+  </div>
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-m">Case ID 1234567</span>
         Edify multi-academy trust
       </h1>
 
+     
 
       <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" aria-current="page" href="case-overview">About the case</a>
+            <a class="moj-sub-navigation__link"  href="case-overview">About the case</a>
           </li>
       
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="trust-overview">About the trust</a>
+            <a class="moj-sub-navigation__link" aria-current="page" href="trust-overview">About the trust</a>
           </li>
       
           <!-- <li class="moj-sub-navigation__item">
@@ -62,259 +74,7 @@
       
       </nav>
 
-      
-
-      <div class="govuk-tabs" data-module="govuk-tabs">
-        <h2 class="govuk-tabs__title">
-          Contents
-        </h2>
-        <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#past-day">
-              Case overview
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#past-week">
-              Trust overview
-            </a>
-          </li>
-          <!-- <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#past-month">
-              Notes
-            </a>
-          </li> -->
-          <!-- <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#past-year">
-              Past year
-            </a>
-          </li> -->
-        </ul>
-        <div class="govuk-tabs__panel" id="past-day">
-          <h2 class="govuk-heading-m">Case overview</h2>
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Trust
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Edify multi-academy trust
-              </dd>
-            </div>
-            
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Concern type
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Governance
-              </dd>
-              
-              <dd class="govuk-summary-list__actions">
-      <ul class="govuk-summary-list__actions-list">
-        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> information about the concern </span>
-          </a></li>
-        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
-            Close<span class="govuk-visually-hidden"> the concern</span>
-          </a></li>
-      </ul>
-    </dd>
-              <!-- <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
-                </a>
-              </dd> -->
-            </div>
-    
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Concern risk level
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Red
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
-                </a>
-              </dd>
-            </div>
-
-    
-            
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Risk to trust
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Red
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
-                </a>
-              </dd>
-            </div>
-    
-    
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Region
-              </dt>
-              <dd class="govuk-summary-list__value">
-                South West
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
-                </a>
-              </dd>
-            </div>
-    
-
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Assigned to
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Isobel Seacombe
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
-                </a>
-              </dd>
-            </div>
-
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Added on
-              </dt>
-              <dd class="govuk-summary-list__value">
-                5 September 2023
-              </dd>
-            </div>
-
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Last updated
-              </dt>
-              <dd class="govuk-summary-list__value">
-                5 September 2023
-              </dd>
-            </div>
-          </dl>
-
-
-          <h2 class="govuk-heading-m">Case details</h2>
-
-         
-          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h3 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    Issue
-                  </span>
-                </h3>
-              </div>
-              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p class="govuk-body">The issue is dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
-                  quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. </p>
-              </div>
-            </div>
-
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    Case status
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <p class="govuk-body">The status is dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
-                  quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin.</p>
-              </div>
-            </div>
-
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                    Case aim
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                <p class="govuk-body">The aim is dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi.</p>
-              </div>
-            </div>
-
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                    De-escalation point
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-                <p class="govuk-body">We will de-escalate when dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
-                  quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin.</p>
-              </div>
-            </div>
-
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
-                    Next steps
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
-                <p class="govuk-body">The next steps are dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
-                  quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin.</p>
-              </div>
-            </div>
-
-
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading" >
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
-                    Case notes
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
-                <p class="govuk-body">Case notes dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
-                  bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
-                  quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin.</p>
-              </div>
-            </div>
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-          <h2 class="govuk-heading-m">About the trust</h2>
+      <h2 class="govuk-heading-m">About the trust</h2>
           
           <dl class="govuk-summary-list summary-list-margin-0 govuk-!-margin-top-3">
             <div class="govuk-summary-list__row">
@@ -463,8 +223,189 @@
           </table>
 
 
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        
+      
+              <h2 class="govuk-heading-m">Cases and concerns</h2>
+
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#past-day">
+                  Active cases
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-week">
+                  Closed cases
+                </a>
+              </li>
+              <!-- <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-month">
+                  Notes
+                </a>
+              </li> -->
+              <!-- <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-year">
+                  Past year
+                </a>
+              </li> -->
+            </ul>
+
+
+
+            <div class="govuk-tabs__panel" id="past-day">
+              <h2 class="govuk-heading-m">Active cases</h2>
+              
+              <div id="active-cases">
+        
+                <table class="govuk-table govuk-!-margin-top-6">
+                    <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">
+                        Active cases
+                    </caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row tr__large">
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                                Case ID
+                            </th>
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_6" scope="col">
+                                Date created
+                            </th>
+                            <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                                Contents
+                            </th>
+                            <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                                Assigned to
+                            </th>
+                        </tr>
+                    </thead>
+                
+                    <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row tr__large" data-testid="row-2001463">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001463/management">2001463</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        24 August 2023
+                                    </td>
+                
+                                        <td class="govuk-table__cell">
+                                            <span>There are no active concerns, actions or decisions.</span>
+                                        </td>
+                
+                
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row tr__large" data-testid="row-2001462">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001462/management">2001462</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        23 August 2023
+                                    </td>
+                
+                                        <td class="govuk-table__cell">
+                                            <span>There are no active concerns, actions or decisions.</span>
+                                        </td>
+                
+                
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row tr__large" data-testid="row-2001211">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001211/management">2001211</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        11 August 2023
+                                    </td>
+                
+                
+                
+                                        <td class="govuk-table__cell">
+                                            <div class="concerns-secondary-text-colour">Concerns</div>
+                                            <ul class="govuk-list govuk-list--bullet" data-testid="concern">
+                                                    <li>Force majeure</li>
+                                            </ul>
+                                            <div class="concerns-secondary-text-colour">Risk to trust</div>
+                                            <div class="govuk-label-wrapper" data-testid="risk-to-trust-list">
+                                                    <span class="govuk-tag ragtag ragtag__red">
+                                                        Red
+                                                    </span>
+                                            </div>
+                                        </td>
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row tr__large" data-testid="row-2001126">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001126/management">2001126</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        11 July 2023
+                                    </td>
+                
+                
+                
+                                        <td class="govuk-table__cell">
+                                            <div class="concerns-secondary-text-colour">Concerns</div>
+                                            <ul class="govuk-list govuk-list--bullet" data-testid="concern">
+                                                    <li>Irregularity: Suspected fraud</li>
+                                                    <li>Governance and compliance: Compliance</li>
+                                            </ul>
+                                            <div class="concerns-secondary-text-colour">Risk to trust</div>
+                                            <div class="govuk-label-wrapper" data-testid="risk-to-trust-list">
+                                                    <span class="govuk-tag ragtag ragtag__red">
+                                                        Red
+                                                    </span>
+                                            </div>
+                                        </td>
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                
+                
+                
+                
+                </div>
+
+
+              </div>
+            </div>
+
+          
+
          
+
+
+          
+
+
+
         </div>
+
+
+
+        
+          
+
+
+         
+        
         <!-- <p class="govuk-body">
         dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing 
         bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo 
