@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Close case
+        <span class="govuk-caption-m">Case ID 1234567<br>
+          Edify multi-academy trust</span>
+      </h1>
+
+      
+       
+      
+
+      <form class="form" action="/case-closed" method="post">
+
+      
+        
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                Rationale for closure
+              </label>
+            </h1>
+            <!-- <div id="with-hint-hint" class="govuk-hint">
+              
+            Summarise the main issues, background information and how you’ve applied the risk management framework to this case.  
+
+
+            </div> -->
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 200 characters
+          </div>
+        </div>
+
+        {{ govukButton({
+          text: "Close case"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -34,9 +34,9 @@
     </div> -->
 
     <div class="buttons-topOfPage">
-      <div class="govuk-width-container">
+      <!-- <div class="govuk-width-container">
           <a id="back-link-event" href="/" class="govuk-back-link">Back to casework</a>
-      </div>
+      </div> -->
           <form method="post">
 
               <button role="button" class="govuk-button govuk-button--warning float__right" id="close-case-button" data-module="govuk-button">
@@ -136,10 +136,15 @@
           </dl>
 
 
-          <table class="govuk-table  govuk-!-margin-top-9">
-            <caption class="govuk-table__caption govuk-table__caption--m">
+          
+      <div class="govuk-grid-row govuk-!-margin-top-9">
+        <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">Academies in this trust</h2>
+
+          <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption govuk-table__caption--m">
               Academies in this trust
-            </caption>
+            </caption> -->
           
             <thead class="govuk-table__head">
               <tr class="govuk-table__row tr__large">
@@ -221,16 +226,34 @@
                   </tr>
             </tbody>
           </table>
+  
+     </div>
+</div>
 
 
 
 
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-9">
       <div class="govuk-grid-column-full">
         
       
               <h2 class="govuk-heading-m">Cases and concerns</h2>
+
+              <!-- <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                    <li class="moj-sub-navigation__item">
+                        <a id="active-cases-tab" class="moj-sub-navigation__link" aria-expanded="true" tabindex="0"><span aria-hidden="false"></span>Active Cases</a>
+                    </li>
+            
+                    <li class="moj-sub-navigation__item">
+                        <a id="closed-cases-tab" class="moj-sub-navigation__link" aria-expanded="true" tabindex="0" aria-current="page"><span aria-hidden="true"></span>Closed Cases</a>
+                    </li>
+                </ul>
+            </nav> -->
+
+
 
           <div class="govuk-tabs" data-module="govuk-tabs">
             <h2 class="govuk-tabs__title">
@@ -275,37 +298,53 @@
                             <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
                                 Case ID
                             </th>
-                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_6" scope="col">
-                                Date created
-                            </th>
+                           
                             <th class="govuk-table__header govuk-table__cell__cases" scope="col">
                                 Contents
                             </th>
-                            <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                              Managed by
+                          </th>
+
+                            <!-- <th class="govuk-table__header govuk-table__cell__cases" scope="col">
                                 Assigned to
-                            </th>
+                            </th> -->
+
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                              Date created
+                          </th>
                         </tr>
                     </thead>
                 
                     <tbody class="govuk-table__body">
-                                <tr class="govuk-table__row tr__large" data-testid="row-2001463">
+                                
+                      
+                      <tr class="govuk-table__row tr__large" data-testid="row-2001463">
                                     <td class="govuk-table__cell" data-testid="case-id">
                                         <a class="govuk-link" href="/case/2001463/management">2001463</a>
                                     </td>
-                                    <td class="govuk-table__cell" data-testid="created-at">
-                                        24 August 2023
-                                    </td>
+                                    
                 
                                         <td class="govuk-table__cell">
                                             <span>There are no active concerns, actions or decisions.</span>
                                         </td>
                 
-                
-                                    <td class="govuk-table__cell">
+                                        <td class="govuk-table__cell">
+                                          SFSO<br>Midlands and West - West Midlands
+                                      </td>
+
+                                    <!-- <td class="govuk-table__cell">
                                         Isobel Seacombe
-                                    </td>
+                                    </td> -->
+
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                      24 August 2023
+                                  </td>
                                 </tr>
-                                <tr class="govuk-table__row tr__large" data-testid="row-2001462">
+
+
+                                <!-- <tr class="govuk-table__row tr__large" data-testid="row-2001462">
                                     <td class="govuk-table__cell" data-testid="case-id">
                                         <a class="govuk-link" href="/case/2001462/management">2001462</a>
                                     </td>
@@ -321,14 +360,14 @@
                                     <td class="govuk-table__cell">
                                         Isobel Seacombe
                                     </td>
-                                </tr>
+                                </tr> -->
+
+
                                 <tr class="govuk-table__row tr__large" data-testid="row-2001211">
                                     <td class="govuk-table__cell" data-testid="case-id">
                                         <a class="govuk-link" href="/case/2001211/management">2001211</a>
                                     </td>
-                                    <td class="govuk-table__cell" data-testid="created-at">
-                                        11 August 2023
-                                    </td>
+                                    
                 
                 
                 
@@ -344,11 +383,21 @@
                                                     </span>
                                             </div>
                                         </td>
+
+
                                     <td class="govuk-table__cell">
-                                        Isobel Seacombe
+                                        Regions Group<br>West Midlands
                                     </td>
+
+
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                      11 August 2023
+                                  </td>
                                 </tr>
-                                <tr class="govuk-table__row tr__large" data-testid="row-2001126">
+
+
+
+                                <!-- <tr class="govuk-table__row tr__large" data-testid="row-2001126">
                                     <td class="govuk-table__cell" data-testid="case-id">
                                         <a class="govuk-link" href="/case/2001126/management">2001126</a>
                                     </td>
@@ -374,7 +423,7 @@
                                     <td class="govuk-table__cell">
                                         Isobel Seacombe
                                     </td>
-                                </tr>
+                                </tr> -->
                     </tbody>
                 </table>
                 

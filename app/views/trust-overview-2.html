@@ -1,0 +1,455 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to casework",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      <!-- <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Case created
+        </h3>
+        <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p>
+      </div>
+    </div> -->
+
+    <a href="close-case-and-actions" role="button" draggable="false" class="govuk-button govuk-button--warning float__right" data-module="govuk-button">
+      Close case
+    </a>
+
+  
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Case ID 1234567</span>
+        Edify multi-academy trust
+      </h1>
+
+     
+
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link"  href="case-overview-2">About the case</a>
+          </li>
+      
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="trust-overview-2">About the trust</a>
+          </li>
+      
+          <!-- <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="./academies-in-this-trust-pupil-numbers">Pupil numbers</a>
+          </li>
+      
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="./academies-in-this-trust-free-school-meals">Free school meals</a>
+          </li> -->
+        </ul>
+      
+      </nav>
+
+      <h2 class="govuk-heading-m">About the trust</h2>
+          
+          <dl class="govuk-summary-list summary-list-margin-0 govuk-!-margin-top-3">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Type</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-type">
+                Multi-academy trust
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Address</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-address">
+                Bourne Abbey C Of E Primary Academy, Abbey Road, Bourne, PE10 9EP
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Number of academies</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-academies">
+                3
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Total pupil capacity</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-pupil-capacity">
+                1083
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Number of pupils</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-number-of-pupils">
+                1097 (101%)
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Group ID</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-group-id">
+                TR00261
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">UKPRN (UK provider reference number) </dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-UKPRN">
+                10058308
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Trust phone number</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-phone-number">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Companies House</dt>
+              <dd class="govuk-summary-list__value" data-testid="trust-company-house-number">
+                <a href="https://find-and-update.company-information.service.gov.uk/company/07318714" target="_blank">
+                  07318714 (opens in new tab)
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+
+          <p class="govuk-body">
+            <a href="https://trams-prototype.herokuapp.com/version-5/trust-details" class="govuk-link" rel="noreferrer noopener" target="_blank">View more detailed information about the trust (opens in new tab)</a>
+          </p>
+          
+
+          
+          <table class="govuk-table  govuk-!-margin-top-9">
+            
+            <caption class="govuk-table__caption govuk-table__caption--m">
+              Academies in this trust
+            </caption>
+          
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row tr__large">
+                <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_15" scope="col">
+                  Academy
+                </th>
+                      <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                          URN (unique reference number)
+                      </th>
+                <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                  Type
+                </th>
+                      <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                          LA (local authority)
+                      </th>
+                <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                  Head
+                </th>
+              </tr>
+            </thead>
+          
+            <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.bourneabbeyprimary.co.uk" target="_blank">
+                        Bourne Abbey Church of England Primary Academy
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      136354
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy converter
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mr Peter Bellamy
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.bourneelseaparkprimary.co.uk" target="_blank">
+                        Bourne Elsea Park Church of England Primary Academy
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      140214
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy sponsor led
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mr Peter Bellamy
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row tr__large">
+                    <td class="govuk-table__cell">
+                      <a href="http://www.colsterworth.lincs.sch.uk" target="_blank">
+                        Colsterworth Church of England Primary School
+                      </a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      146279
+                    </td>
+                    <td class="govuk-table__cell">
+                      Academy sponsor led
+                    </td>
+                    <td class="govuk-table__cell">
+                      Lincolnshire
+                    </td>
+                    <td class="govuk-table__cell">
+                      Mrs Louise Jordan
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+    <div class="govuk-grid-row govuk-!-margin-top-9">
+      <div class="govuk-grid-column-full">
+        
+      
+              <h2 class="govuk-heading-m">Cases and concerns</h2>
+
+              <!-- <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                    <li class="moj-sub-navigation__item">
+                        <a id="active-cases-tab" class="moj-sub-navigation__link" aria-expanded="true" tabindex="0"><span aria-hidden="false"></span>Active Cases</a>
+                    </li>
+            
+                    <li class="moj-sub-navigation__item">
+                        <a id="closed-cases-tab" class="moj-sub-navigation__link" aria-expanded="true" tabindex="0" aria-current="page"><span aria-hidden="true"></span>Closed Cases</a>
+                    </li>
+                </ul>
+            </nav> -->
+
+
+
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#past-day">
+                  Active cases
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-week">
+                  Closed cases
+                </a>
+              </li>
+              <!-- <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-month">
+                  Notes
+                </a>
+              </li> -->
+              <!-- <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-year">
+                  Past year
+                </a>
+              </li> -->
+            </ul>
+
+
+
+            <div class="govuk-tabs__panel" id="past-day">
+              <h2 class="govuk-heading-m">Active cases</h2>
+              
+              <div id="active-cases">
+        
+                <table class="govuk-table govuk-!-margin-top-6">
+                    <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">
+                        Active cases
+                    </caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row tr__large">
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                                Case ID
+                            </th>
+                           
+                            <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                                Contents
+                            </th>
+
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                              Managed by
+                          </th>
+
+                            <!-- <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+                                Assigned to
+                            </th> -->
+
+                            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_4" scope="col">
+                              Date created
+                          </th>
+                        </tr>
+                    </thead>
+                
+                    <tbody class="govuk-table__body">
+                                
+                      
+                      <tr class="govuk-table__row tr__large" data-testid="row-2001463">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001463/management">2001463</a>
+                                    </td>
+                                    
+                
+                                        <td class="govuk-table__cell">
+                                            <span>There are no active concerns, actions or decisions.</span>
+                                        </td>
+                
+                                        <td class="govuk-table__cell">
+                                          SFSO<br>Midlands and West - West Midlands
+                                      </td>
+
+                                    <!-- <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td> -->
+
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                      24 August 2023
+                                  </td>
+                                </tr>
+
+
+                                <!-- <tr class="govuk-table__row tr__large" data-testid="row-2001462">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001462/management">2001462</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        23 August 2023
+                                    </td>
+                
+                                        <td class="govuk-table__cell">
+                                            <span>There are no active concerns, actions or decisions.</span>
+                                        </td>
+                
+                
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr> -->
+
+
+                                <tr class="govuk-table__row tr__large" data-testid="row-2001211">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001211/management">2001211</a>
+                                    </td>
+                                    
+                
+                
+                
+                                        <td class="govuk-table__cell">
+                                            <div class="concerns-secondary-text-colour">Concerns</div>
+                                            <ul class="govuk-list govuk-list--bullet" data-testid="concern">
+                                                    <li>Force majeure</li>
+                                            </ul>
+                                            <div class="concerns-secondary-text-colour">Risk to trust</div>
+                                            <div class="govuk-label-wrapper" data-testid="risk-to-trust-list">
+                                                    <span class="govuk-tag ragtag ragtag__red">
+                                                        Red
+                                                    </span>
+                                            </div>
+                                        </td>
+
+
+                                    <td class="govuk-table__cell">
+                                        Regions Group<br>West Midlands
+                                    </td>
+
+
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                      11 August 2023
+                                  </td>
+                                </tr>
+
+
+
+                                <!-- <tr class="govuk-table__row tr__large" data-testid="row-2001126">
+                                    <td class="govuk-table__cell" data-testid="case-id">
+                                        <a class="govuk-link" href="/case/2001126/management">2001126</a>
+                                    </td>
+                                    <td class="govuk-table__cell" data-testid="created-at">
+                                        11 July 2023
+                                    </td>
+                
+                
+                
+                                        <td class="govuk-table__cell">
+                                            <div class="concerns-secondary-text-colour">Concerns</div>
+                                            <ul class="govuk-list govuk-list--bullet" data-testid="concern">
+                                                    <li>Irregularity: Suspected fraud</li>
+                                                    <li>Governance and compliance: Compliance</li>
+                                            </ul>
+                                            <div class="concerns-secondary-text-colour">Risk to trust</div>
+                                            <div class="govuk-label-wrapper" data-testid="risk-to-trust-list">
+                                                    <span class="govuk-tag ragtag ragtag__red">
+                                                        Red
+                                                    </span>
+                                            </div>
+                                        </td>
+                                    <td class="govuk-table__cell">
+                                        Isobel Seacombe
+                                    </td>
+                                </tr> -->
+                    </tbody>
+                </table>
+                
+                
+                
+                
+                </div>
+
+
+              </div>
+            </div>
+
+          
+
+         
+
+
+          
+
+
+
+        </div>
+
+
+
+        
+          
+
+
+         
+        
+        
+
+    </div>
+  </div>
+
+{% endblock %}

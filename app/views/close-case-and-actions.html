@@ -1,0 +1,172 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to case overview",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        There are still open items on this case 
+      </h1>
+
+      <p>
+        You need to close the following things before being able to close this case.
+      </p>
+
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <!-- <h2 class="govuk-heading-m">Case overview</h2> -->
+            <dl class="govuk-summary-list">
+               
+              
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Concern type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Governance
+                </dd>
+                
+                <dd class="govuk-summary-list__actions">
+                  <!-- <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> information about the concern </span>
+                      </a></li>
+                    <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                        Close<span class="govuk-visually-hidden"> the concern</span>
+                      </a></li>
+                  </ul> -->
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    Close<span class="govuk-visually-hidden"> concern</span>
+                  </a>
+                </dd>
+              </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Case action
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  NtI (Notice to improve)
+                </dd>
+                
+                <dd class="govuk-summary-list__actions">
+                  <!-- <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> information about the concern </span>
+                      </a></li>
+                    <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                        Close<span class="govuk-visually-hidden"> the concern</span>
+                      </a></li>
+                  </ul> -->
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    Close<span class="govuk-visually-hidden"> action</span>
+                  </a>
+                </dd>
+              </div>
+
+
+              
+             
+            </dl>
+
+        </div>
+
+      </div>
+
+
+      <!-- {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Concern"
+            },
+            value: {
+              text: "Governance"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Close",
+                  visuallyHiddenText: "Concern"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Action "
+            },
+            value: {
+              text: "NtI (Notice to improve)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Close",
+                  visuallyHiddenText: "Action"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Question 3"
+            },
+            value: {
+              text: "Answer 3"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }} -->
+
+      <!-- <h2 class="govuk-heading-m">
+        Now send your application
+      </h2>
+
+      <p>
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form> -->
+
+    </div>
+  </div>
+{% endblock %}

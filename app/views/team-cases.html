@@ -1,0 +1,254 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-extra-width-container">
+
+        <!-- <h1 class="govuk-heading-l">
+          
+          Manage casework
+        </h1>
+
+         -->
+  
+        
+  
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+  
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link"  href="manage-cases">Your casework</a>
+            </li>
+        
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="team-cases">Team casework</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="closed-cases">Your closed cases</a>
+            </li>
+        
+           
+          </ul>
+        
+        </nav>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+            
+
+              <div>
+                <li class="card">
+                <h3>Choose the cases you would like to view </h3>
+                <p>Hint text about how to do this </p>
+                <p>
+                  <a href="https://dev.record-concerns-support-trusts.education.gov.uk/team/selectcolleagues" class="govuk-link govuk-link--no-visited-state">Select colleagues</a>
+                </p>
+            </li>
+            </div>
+       </div>
+       </div>
+
+    
+
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            Team casework
+          </caption>
+
+          
+        
+       
+          <thead class="govuk-table__head">
+
+            
+          <tr class="govuk-table__row tr__large">
+            <th class="govuk-table__header govuk-table__cell__cases" scope="col">
+              Case ID
+            </th>
+           
+            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header__width_10" scope="col" aria-sort="none">
+              Trust
+            </th>
+            <th class="govuk-table__header govuk-table__cell__cases" scope="col" aria-sort="none">
+              Contents
+            </th>
+            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header--numeric" scope="col" aria-sort="none">
+              Last updated
+            </th>
+            <th class="govuk-table__header govuk-table__cell__cases govuk-table__header--numeric" scope="col" aria-sort="none">
+              Date created
+            </th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row tr__large" data-testid="row-2001463">
+                <td class="govuk-table__cell" data-testid="case-id">
+                  <a class="govuk-link" href="case/2001463/management">2001463</a>
+                </td>
+                
+                <td class="govuk-table__cell" data-testid="trust-name">
+                  Abbey Academies Trust
+                </td>
+              
+                <td class="govuk-table__cell">
+                  <span>There are no active concerns, actions or decisions.</span>
+                </td>
+
+                <td class="govuk-table__cell" data-testid="updated-at">
+                  24 August 2023
+                </td>
+                <td class="govuk-table__cell" data-testid="created-at">
+                  24 August 2023
+                </td>
+        
+                        
+              </tr>
+
+
+              <tr class="govuk-table__row tr__large" data-testid="row-2001462">
+                <td class="govuk-table__cell" data-testid="case-id">
+                  <a class="govuk-link" href="case/2001462/management">2001462</a>
+                </td>
+
+                <td class="govuk-table__cell" data-testid="trust-name">
+                  Abbey Academies Trust
+                </td>
+
+                <td class="govuk-table__cell">
+                  <span>There are no active concerns, actions or decisions.</span>
+                </td>
+
+                <td class="govuk-table__cell" data-testid="updated-at">
+                  23 August 2023
+                </td>
+                <td class="govuk-table__cell" data-testid="created-at">
+                  23 August 2023
+                </td>
+                    
+              </tr>
+
+
+
+              <tr class="govuk-table__row tr__large" data-testid="row-2001212">
+                <td class="govuk-table__cell" data-testid="case-id">
+                  <a class="govuk-link" href="case/2001212/management">2001212</a>
+                </td>
+               
+                <td class="govuk-table__cell" data-testid="trust-name">
+                  Christ The King Catholic Collegiate
+                </td>
+              
+        
+                <td class="govuk-table__cell">
+                  <div class="concerns-secondary-text-colour">Actions and decisions</div>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        Decision: Multiple Decision Types
+                      </li>
+                  </ul>
+                </td>
+
+
+                <td class="govuk-table__cell" data-testid="updated-at">
+                  17 August 2023
+                </td>
+                <td class="govuk-table__cell" data-testid="created-at">
+                  11 August 2023
+                </td>
+     
+              </tr>
+
+
+
+              <tr class="govuk-table__row tr__large" data-testid="row-2001211">
+                <td class="govuk-table__cell" data-testid="case-id">
+                  <a class="govuk-link" href="case/2001211/management">2001211</a>
+                </td>
+               
+                <td class="govuk-table__cell" data-testid="trust-name">
+                  Abbey Academies Trust
+                </td>
+              
+        
+                <td class="govuk-table__cell">
+                  <div class="concerns-secondary-text-colour">Actions and decisions</div>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        Action: School Resource Management Adviser
+                      </li>
+                      <li>
+                        Decision: Multiple Decision Types
+                      </li>
+                  </ul>
+                </td>
+
+
+                <td class="govuk-table__cell" data-testid="updated-at">
+                  28 September 2023
+                </td>
+                <td class="govuk-table__cell" data-testid="created-at">
+                  11 August 2023
+                </td>
+                        
+              </tr>
+
+
+
+
+              <tr class="govuk-table__row tr__large" data-testid="row-2001126">
+                <td class="govuk-table__cell" data-testid="case-id">
+                  <a class="govuk-link" href="case/2001126/management">2001126</a>
+                </td>
+                
+                <td class="govuk-table__cell" data-testid="trust-name">
+                  Abbey Academies Trust
+                </td>
+              
+        
+                        
+                <td class="govuk-table__cell">
+                  <div class="concerns-secondary-text-colour">Concerns</div>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li data-testid="concern">Irregularity: Suspected fraud</li>
+                      <li data-testid="concern">Governance and compliance: Compliance</li>
+                  </ul>
+                  <div class="concerns-secondary-text-colour">Risk to trust</div>
+                            <div class="govuk-label-wrapper" data-testid="risk-to-trust-list">
+                      <span class="govuk-tag ragtag ragtag__red">
+                        Red
+                      </span>
+                  </div>
+                </td>
+
+
+                <td class="govuk-table__cell" data-testid="updated-at">
+                  17 July 2023
+                </td>
+                <td class="govuk-table__cell" data-testid="created-at">
+                  11 July 2023
+                </td>
+
+              </tr>
+
+
+
+          </tbody>
+        </table>
+
+        
+</div>
+
+
+    </div>
+  </div>
+
+{% endblock %}
